@@ -19,10 +19,17 @@ class Node
     }
 };
 
-void insertathead(Node *&head, int data)
+void insertathead(Node *&head,Node *&tail, int data)
 {
     Node * newnode = new Node(data);
-    newnode -> next = head;
+    if(head == NULL)
+    {
+        tail = newnode;
+    }
+    else
+    {
+        newnode -> next = head;
+    }
     head = newnode;
 }
 
@@ -45,13 +52,13 @@ void print(Node * & head)
 
 int main()
 {
-    Node * node1 = new Node(10);
-    Node * head = node1;
-    Node * tail = node1;
+    // Node * node1 = new Node(10);
+    Node * head = NULL;
+    Node * tail = NULL;
     // insertathead(head,20);
     // insertathead(head,30);
     // insertathead(head,40);
-    // insertathead(head,50);
+    insertathead(head,tail,50);
     insertattail(tail,20);
     insertattail(tail,30);
     insertattail(tail,40);

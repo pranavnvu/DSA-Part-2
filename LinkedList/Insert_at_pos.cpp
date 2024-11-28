@@ -35,6 +35,7 @@ int length(Node * &head)
         temp = temp -> next;
         len++;
     }
+
     return len;
 }
 
@@ -87,7 +88,7 @@ int main()
     insertathead(head,50);
     insertathead(head,60);
 
-    insertatpos(head,20,10);
+    insertatpos(head,20,3);
 
     print(head);
 

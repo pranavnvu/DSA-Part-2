@@ -19,7 +19,7 @@ class Node
     }
 };
 
-void insertathead(Node * & head, int data)
+void insertathead(Node *&head, int data)
 {
     Node * newnode = new Node(data);
     newnode -> next = head;
